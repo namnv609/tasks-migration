@@ -1,0 +1,17 @@
+PATH
+  remote: .
+  specs:
+    tasks-migration (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  tasks-migration!
+
+BUNDLED WITH
+   1.16.1
