@@ -18,7 +18,7 @@ module TasksMigration
       private
       def get_all_tasks
         tasks_file_path = Rails.root.join "config", "tasks_migration.yml"
-        YAML.load_file(tasks_file_path)["tasks"]
+        YAML.load_file(tasks_file_path)["tasks"] || []
       end
     end
   end
