@@ -9,8 +9,11 @@ module TasksMigration
         executed_tasks = TasksMigrationSchema.pluck :version
 
         (all_tasks - executed_tasks).each do |task|
-          puts "Running task #{task}..."
-          task.constantize.execute
+          task_name = task.classify
+
+          puts "Running task #{task_name}..."
+          task_name.constantize.execute
+
           TasksMigrationSchema.create version: task
         end
       end
