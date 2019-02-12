@@ -31,7 +31,7 @@ This command will create 2 files:
 Create a new task by command:
 
 ```
-rails generate tasks_migration:task <TaskName>
+rails generate tasks_migration:task <TaskName> [--no-suffix]
 ```
 
 Business Logic will be handled in method `self.excute` on file  `app/migration_tasks/<task_name>.rb`. Example:
