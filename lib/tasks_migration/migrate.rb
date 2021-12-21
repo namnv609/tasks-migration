@@ -5,6 +5,8 @@ module TasksMigration
   module Migrate
     class << self
       def start
+        ActiveRecord::Base.logger = Logger.new(STDOUT)
+
         all_tasks = get_all_tasks
         executed_tasks = TasksMigrationSchema.pluck :version
 
